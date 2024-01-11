@@ -1,0 +1,11 @@
+void main ( )
+{
+int a , b , c ;
+c = a + b ;
+if ( c = = 100 )
+{
+c = a / b ;
+a = 4 ;
+}
+return 0 ;
+}

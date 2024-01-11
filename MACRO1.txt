@@ -1,0 +1,20 @@
+MACRO
+compute &y, &x, &r=AREG
+LCL &m
+.AGAIN MOV &r, &y
+ADD BREG, &y
+MUL BREG, &m
+SUB BREG, CREG
+AIF (&x . EQ . &y) . AGAIN
+&m SET 10
+MEND
+MACRO
+ibc &w, &p, &q, &k=10
+MOV AREG, &p
+MUL AREG, &k
+MEND 
+START
+MOV BREG, 34
+MUL AREG, BREG
+ADD BREG,87
+END
